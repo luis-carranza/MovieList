@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,9 @@
 		89675F3C265C8C790063F5EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89675F3B265C8C790063F5EC /* ContentView.swift */; };
 		89675F3E265C8C7B0063F5EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89675F3D265C8C7B0063F5EC /* Assets.xcassets */; };
 		89675F41265C8C7B0063F5EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89675F40265C8C7B0063F5EC /* Preview Assets.xcassets */; };
+		89675F49265C8D0A0063F5EC /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89675F48265C8D0A0063F5EC /* MovieService.swift */; };
+		89675F4B265C8D2F0063F5EC /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89675F4A265C8D2F0063F5EC /* MovieModel.swift */; };
+		89675F4E265CAE200063F5EC /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 89675F4D265CAE200063F5EC /* URLImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,8 @@
 		89675F3D265C8C7B0063F5EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89675F40265C8C7B0063F5EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		89675F42265C8C7B0063F5EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89675F48265C8D0A0063F5EC /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		89675F4A265C8D2F0063F5EC /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89675F4E265CAE200063F5EC /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +63,8 @@
 				89675F3D265C8C7B0063F5EC /* Assets.xcassets */,
 				89675F42265C8C7B0063F5EC /* Info.plist */,
 				89675F3F265C8C7B0063F5EC /* Preview Content */,
+				89675F48265C8D0A0063F5EC /* MovieService.swift */,
+				89675F4A265C8D2F0063F5EC /* MovieModel.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -85,6 +93,9 @@
 			dependencies = (
 			);
 			name = MovieList;
+			packageProductDependencies = (
+				89675F4D265CAE200063F5EC /* URLImage */,
+			);
 			productName = MovieList;
 			productReference = 89675F36265C8C790063F5EC /* MovieList.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +123,9 @@
 				Base,
 			);
 			mainGroup = 89675F2D265C8C790063F5EC;
+			packageReferences = (
+				89675F4C265CAE200063F5EC /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 89675F37265C8C790063F5EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89675F4B265C8D2F0063F5EC /* MovieModel.swift in Sources */,
+				89675F49265C8D0A0063F5EC /* MovieService.swift in Sources */,
 				89675F3C265C8C790063F5EC /* ContentView.swift in Sources */,
 				89675F3A265C8C790063F5EC /* MovieListApp.swift in Sources */,
 			);
@@ -328,6 +344,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		89675F4C265CAE200063F5EC /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		89675F4D265CAE200063F5EC /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89675F4C265CAE200063F5EC /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 89675F2E265C8C790063F5EC /* Project object */;
 }
